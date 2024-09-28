@@ -55,14 +55,14 @@ const video = async (m, Matrix) => {
             document: buffer,
             mimetype: 'video/mp4',
             fileName: `${title}.mp4`,
-            caption: `> ${title}\n> © Powered by 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿`,
+            caption: `> ${title}\n> © Powered by white Tiger MD`,
           };
           await Matrix.sendMessage(m.from, docMessage, { quoted: m });
         } else {
           const videoMessage = {
             video: buffer,
             mimetype: 'video/mp4',
-            caption: `> ${title}\n> © Powered by 𝞢𝙏𝞖𝞘𝞦-𝞛𝘿`,
+            caption: `> ${title}\n> © Powered by White Tiger MD`,
           };
           await Matrix.sendMessage(m.from, videoMessage, { quoted: m });
         }
