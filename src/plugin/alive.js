@@ -26,15 +26,14 @@ const alive = async (m, Matrix) => {
     image.print(font, x, y, timeString, width, Jimp.HORIZONTAL_ALIGN_CENTER | Jimp.VERTICAL_ALIGN_MIDDLE);
     const buffer = await image.getBufferAsync(Jimp.MIME_PNG);
     
-    const uptimeMessage = `> `Attention White Tiger Botz Inc, the heart and soul behind White Inc's innovation! 🐅🚀 Let's push boundaries, break barriers, and create something extraordinary together! Your dedication and expertise are what make the impossible, possible. Let's continue to roar ahead with strength, precision, and unmatched creativity. Onward to success!`
+    const uptimeMessage = `*🤖 ETHIX-MD Status Overview*
 _________________________________________
 
-*📌️ ${hours} Hour(s)*
-*📌️ ${minutes} Minute(s)*
-*📌️ ${seconds} Second(s)*
+*📆 ${days} Day(s)*
+*🕰️ ${hours} Hour(s)*
+*⏳ ${minutes} Minute(s)*
+*⏲️ ${seconds} Second(s)*
 _________________________________________
-
-🗿 *STAY CONNECTED* 🔗💖
 `;
     
     const buttons = [
@@ -43,12 +42,6 @@ _________________________________________
         "buttonParamsJson": JSON.stringify({
           display_text: "MENU",
           id: `${prefix}menu`
-        })
-      {
-        "name": "quick_reply",
-        "buttonParamsJson": JSON.stringify({
-          display_text: "OWNER",
-          id: `${prefix}owner`
         })
       },
       {
@@ -72,7 +65,7 @@ _________________________________________
               text: uptimeMessage
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "> © `POWERED BY WHITE TIGER BOTZ INC`"
+              text: "© ᴘᴏᴡᴇʀᴅ ʙʏ ᴇᴛʜɪx-ᴍᴅ"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
               ...(await prepareWAMessageMedia({ image: buffer }, { upload: Matrix.waUploadToServer })),
@@ -89,8 +82,8 @@ _________________________________________
               forwardingScore: 999,
               isForwarded: true,
               forwardedNewsletterMessageInfo: {
-                newsletterJid: '748484@newsletter',
-                newsletterName: "WHITE-TIGER-MD",
+                newsletterJid: '120363249960769123@newsletter',
+                newsletterName: "Ethix-MD",
                 serverMessageId: 143
               }
             }
